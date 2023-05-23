@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistachio</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl.carousel/2.3.4/owl.carousel.min.js"></script>
+</head>
+<style>
+    .custom-color {
+        background-color: #BCB683 !important;
+    }
+
+    .primary-color {
+        background-color: #3A4E3F !important;
+    }
+
+    .text-color {
+        color: #3A4E3F;
+    }
+
+    #section-3 {
+        min-height: 30rem;
+        /* background-size: cover, cover; */
+        /* background-repeat: no-repeat; */
+        /* background-position: center, center; */
+        /* background-attachment: fixed; */
+
+    }
+
+    .gallery-h {
+        height: 400px;
+        width: 400px;
+    }
+
+    .slider {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .slide {
+        flex: 0 0 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .slider-container {
+        position: relative;
+    }
+
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .active-dot {
+        background-color: #333;
+    }
+</style>
+
+<body id="index" class="opening-show">
+    <section
+        class="bg-[https://wedding.invie.my.id/assets/vendors/theme-ten/img/decoration/brush-opening.png] bg-cover bg-center bg-gradient-to-t from-black bg-opacity-50 to-black bg-opacity-50"
+        style="background-image: linear-gradient(180deg, rgba(18, 38, 23, 0.7) 0%, rgba(18, 38, 23, 0.7) 100%), url('https://wedding.invie.my.id/assets/vendors/theme-four/img/bg/header.jpg');">
+        <nav class="primary-color bg-no-repeat bg-fixed fixed w-full z-10">
+            <div class=" mx-8 mx-auto flex items-center justify-center">
+                <ul class="flex space-x-8 p-4 items-center text-w">
+                    <li>
+                        <a href="#" class="text-white hover:border-b-2 hover:border-red">Mempelai</a>
+                    </li>
+                    <li>
+                        <a href="#section-6" class="text-white hover:border-b-2 hover:border-white">Undangan</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white hover:border-b-2 hover:border-white">Story</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white hover:border-b-2 hover:border-white">
+                            <img class="w-32"
+                                src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/text-dec-spouse.svg"
+                                alt="" srcset=""></a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="text-white hover:border-b-2 hover:border-white">Galeri</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white hover:border-b-2 hover:border-white">RSVP</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-white hover:border-b-2 hover:border-white">Wish</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="h-screen flex justify-center items-center text-white text-center flex-grow-1 align-items-lg-center "
+            data-aos="zoom-in" data-aos-duration="1200">
+            <div>
+
+
+                <h1 class="font-bold font-kaushan text-6xl">Farrel &amp; Fitri</h1>
+                <div class="flex justify-center mb-8">
+                    <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-2.svg"
+                        alt="" srcset="">
+                </div>
+                <h4 class="font-bold">Kepada Yth. Tamu Undangan</h4>
+                <p>Kami mengundang Bapak/Ibu/Saudara/i di acara pernikahan kami pada : <br>
+                    Minggu, 26 Februari 2023</p>
+                <p class="mt-5 mb-3 text-xl"><i>*Mohon maaf bila ada kesalahan penulisan nama dan gelar</i></p>
+                <a href="/pistachio-main.html">
+                    <button id="primary-color-open-opening"
+                        class="custom-color text-white  mt-5 mb-5 rounded outline-none text-xl p-4 transition-all duration-300 font-medium">
+                        BUKA UNDANGAN
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- QS. Ar-Rum (30): 21 -->
+    <section class="bg-gray-200 py-10 px-40 text-center" id="section-2">
+        <div class=" mx-8 text-dark text-center">
+            <div class="flex justify-center">
+                <div class="col-lg-8">
+                    <p class="mb-8 text-sm md:text-3xle" data-aos="fade-up" data-aos-duration="1000">
+                        “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari
+                        jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+                        antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
+                        (kebesaran Allah) bagi kaum yang berpikir.”
+                    </p>
+
+                    <div data-aos="fade-up" data-aos-duration="1200" class="aos-init aos-animate">
+                        QS. Ar-Rum (30): 21
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- image -->
+    <section id="section-3"
+        class="bg-no-repeat bg-fixed bg-[https://wedding.invie.my.id/assets/vendors/theme-four/img/bg/section-2.jpg] bg-cover bg-center bg-gradient-to-t from-black bg-opacity-50 to-black bg-opacity-50"
+        style="background-image: linear-gradient(180deg, rgba(18, 38, 23, 0.7) 0%, rgba(18, 38, 23, 0.7) 100%), url('https://wedding.invie.my.id/assets/vendors/theme-four/img/bg/section-2.jpg');">
+    </section>
+    <!-- SECTION BRIDE -->
+    <section id="section-4" class="bg-cover bg-center">
+
+
+        <div class="text-dark-500 text-center py-16">
+            <div class="flex justify-center">
+                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                    alt="" srcset="">
+            </div>
+            <h3 class="  text-xl my-4">Mempelai</h3>
+            <p class="font-light mb-4">Assalamu'alaikum Warahamatullahi Wabarakatuh</p>
+            <div class="font-light mb-16">
+                Maha Suci Allah yang telah menciptakan mahkluk-Nya berpasang-pasangan.<br class="hidden lg:block">Ya
+                Allah semoga ridho-Mu tercurah mengiringi pernikahan putra-putri kami:
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center">
+                <div class="md:w-6/12 flex flex-col items-center mb-8 md:mb-0 before:content-before">
+                    <div class="rounded-full overflow-hidden w-64 h-64 mb-6 img-wrapper img-wrapper-left">
+                        <div class="img-wrapper-spouse">
+                            <img src="https://wedding.invie.my.id/assets/img/bride/wisnu2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold">Farrel Alamsyah</h3>
+                    <h6 class="mt-1">Putra pertama dari Bapak Sudrajat &amp; Ibu Susmita</h6>
+                    <button type="button" class="primary-color text-white p-4 rounded my-2"
+                        onclick="window.open('https://www.instagram.com/invie.id')"><i
+                            class="ri ri-instagram-alt mr-1"></i> invie.id</button>
+
+
+                </div>
+
+                <div class="md:w-6/12 flex flex-col items-center mb-8 md:mb-0">
+                    <div class="rounded-full overflow-hidden w-64 h-64 mb-6">
+                        <div class="img-wrapper-spouse">
+                            <img src="https://wedding.invie.my.id/assets/img/bride/siren.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-bold">Fitri Qonita</h3>
+                    <h6 class="mt-1">Putri kedua dari Bapak Salam &amp; Ibu Rahmawati</h6>
+                    <button type="button" class="primary-color text-white p-4 rounded my-2"
+                        onclick="window.open('https://www.instagram.com/invie.id')"><i
+                            class="ri ri-instagram-alt mr-1"></i> invie.id</button>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Waktu Acara -->
+    <section id="section-5">
+        <div class="max-w-3xl mx-auto my-24 rounded">
+            <div class="flex justify-center">
+                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                    alt="">
+            </div>
+            <h4 class="text-center text-2xl">Waktu Acara</h4>
+            <h3 class="text-center text-4xl font-medium">Undangan Anda</h3>
+            <p class="text-center mt-16">Dengan memohon rahmat dan ridho Allah, kami mengundang Bapak/Ibu/Saudara/i
+                untuk menghadiri <br> resepsi pernikahan kami yang insyaa Allah akan diselenggarakan pada:</p>
+            <div class="flex justify-center gap-24 my-16">
+                <div>
+                    <h2 class="text-center text-3xl">Akad Nikah</h2>
+                    <p class="text-center">Februari</p>
+                    <div class="flex items-center justify-between">
+                        <h3 class="border-b-2 border-t-2  text-2xl">MINGGU</h3>
+                        <h2 class="text-6xl mx-4">26</h2>
+                        <h3 class="border-b-2 border-t-2  text-2xl">08:00</h3>
+                    </div>
+                    <p class="text-center ml-6">2023</p>
+                </div>
+                <div>
+                    <h2 class="text-center text-3xl">Resepsi Perninkahan</h2>
+                    <p class="text-center">Februari</p>
+                    <div class="flex items-center justify-between">
+                        <h3 class=" border-b-2 border-t-2 text-2xl">MINGGU</h3>
+                        <h2 class="text-6xl mx-4">26</h2>
+                        <h3 class="border-b-2 border-t-2  text-2xl">10:00</h3>
+                    </div>
+                    <p class="text-center ml-6">2023</p>
+                </div>
+            </div>
+            <!-- Map -->
+            <div class="text-center">
+                <p>
+                    <i class="ri ri-pin mr-2"></i> Auditorium Masjid Assalam
+                </p>
+                <div class="row justify-content-center mt-6 rounded">
+                    <div class="col-lg-9">
+                        <div class="mapouter">
+                            <div class="gmap_canvas w-100 h-64rem h-md-26rem rounded-3">
+                                <iframe class="h-64 h-md-26rem" width="100%" id="gmap_canvas"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.330358407701!2d106.87718631415478!3d-6.220095095497344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3637a31fbab%3A0x9e44dab33e9d14bd!2sAuditorium%20Masjid%20As%20Salalm!5e0!3m2!1sen!2sid!4v1627452405205!5m2!1sen!2sid"
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                                </iframe>
+                                <a href="https://2piratebay.org"></a><br>
+                                <style>
+                                    .gmap_canvas {
+                                        overflow: hidden;
+                                        background: none !important;
+                                    }
+                                </style>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="primary-color text-white p-4">
+                        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.330358407701!2d106.87718631415478!3d-6.220095095497344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3637a31fbab%3A0x9e44dab33e9d14bd!2sAuditorium%20Masjid%20As%20Salalm!5e0!3m2!1sen!2sid!4v1627452405205!5m2!1sen!2sid"
+                            class="btn btn-primary mt-4">Lihat Map</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- zoom -->
+    <section id="section-6">
+        <div class="row justify-content-center my-10 max-w-3xl mx-auto">
+            <div class="col-lg-8">
+                <div class="flex justify-center mt-10">
+                    <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                        alt="">
+                </div>
+                <h2 class="text-5xl font-bold text-center mt-5 mb-5">Live Stream</h2>
+
+                <div class="border" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="bg-white max-w-4xl mx-auto text-center py-4 px-8">
+                        <div class="text-dark mb-5">Temui kami secara virtual untuk menyaksikan acara pernikahan
+                            kami yang akan disiarkan <br> langsung, dengan menekan tombol di bawah ini :</div>
+                        <!-- zoom -->
+                        <div class="flex justify-center">
+                            <img class="mb-5" src="https://wedding.invie.my.id/assets/img/livestream/zoom-logo.png"
+                                style="width:180px">
+                        </div>
+
+                        <div class="mb-5">
+                            <button type="submit"
+                                class="text-white btn rounded  py-3  md:py-4 px-4 md:px-4  font-medium text-lg md:text-xl"
+                                onclick="location.href='https://us04web.zoom.us/j/78663926359?pwd=MVpZeS9OMDlEVUQ2SytSakgvWDU1Zz09'">Zoom
+                                Live</button>
+                        </div>
+                        <div class="live-desc">
+                            <p>Meeting ID: 123 123 123</p>
+                            <p>Password: 123456</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECTION PROKES -->
+    <section id="section-7" class="bg-custom-image ">
+
+        <div class="max-w-6xl mx-auto  text-center py-16 pb-32 ">
+            <!-- decoreation -->
+            <div class="flex justify-center pt-4">
+                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                    alt="" srcset="">
+            </div>
+            <h3 class=" !important font-medium mb-4 text-4xl font-normal text-dark" data-aos="fade-up"
+                data-aos-duration="1200">Protokol Kesehatan</h3>
+            <div class="font-normal !important text-center my-16 text-dark " data-aos="fade-up"
+                data-aos-duration="1300">
+                Untuk mematuhi himbauan pemerintah dalam pencegahan penyebaran Covid-19, maka diharapkan <br>
+                Bapak/Ibu/Saudara/i tamu undangan untuk :
+            </div>
+
+            <div class="flex justify-center items-center gap-12">
+                <div class="text-center">
+
+                    <div class="flex justify-center mb-8">
+                        <span class="h-24 w-24 bg-gray-200 flex items-center justify-center rounded-full"
+                            style="background-color: #efefef;">
+                            <i class="fas fa-head-side-mask text-color text-4xl"></i>
+                        </span>
+                    </div>
+
+                    <span class=" font-medium text-center mt-10 text-dark">Selalu memakai masker selama acara
+                        berlangsung</span>
+
+                </div>
+
+                <div class="text-center">
+
+                    <div class="flex justify-center mb-8">
+                        <span class="h-24 w-24 bg-gray-200 flex items-center justify-center rounded-full"
+                            style="background-color: #efefef;">
+                            <i class="fas fa-hands-wash text-color text-4xl"></i>
+                        </span>
+                    </div>
+
+                    <span class=" font-medium text-center mt-10 text-dark">Selalu memakai masker selama acara
+                        berlangsung</span>
+
+                </div>
+                <div class="text-center">
+
+                    <div class="flex justify-center mb-8">
+                        <span class="h-24 w-24 bg-gray-200 flex items-center justify-center rounded-full"
+                            style="background-color: #efefef;">
+                            <i class="fas fa-people-arrows text-color text-4xl"></i>
+                        </span>
+                    </div>
+
+                    <span class=" font-medium text-center mt-10 text-dark">Selalu memakai masker selama acara
+                        berlangsung</span>
+
+                </div>
+                <div class="text-center">
+
+                    <div class="flex justify-center mb-8">
+                        <span class="h-24 w-24 bg-gray-200 flex items-center justify-center rounded-full"
+                            style="background-color: #efefef;">
+                            <i class="fas fa-handshake-slash text-color text-4xl"></i>
+                        </span>
+                    </div>
+
+                    <span class="font-medium text-center mt-10 text-dark">Selalu memakai masker selama acara
+                        berlangsung</span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- STORY -->
+    <section id="section-8">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex justify-center">
+                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                    alt="" srcset="">
+            </div>
+            <p class="text-center text-2xl">Tentang cerita kami berdua</p>
+            <h2 class="text-center text-3xl font-bold">Story</h2>
+            <div class="content">
+                <div class="flex items-center justify-between mb-12  animate-fade-up duration-1400" data-aos="fade-up"
+                    data-aos-duration="1400">
+
+                    <div class="order-2 md:order-2 ">
+                        <div class="rounded-full overflow-hidden mb-6 img-wrapper img-wrapper-left">
+                            <div class="img-wrapper-spouse w-24 h-24 ">
+                                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/misc/hands-1.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-2 md:order-1">
+                        <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/love.svg" alt=""
+                            class="w-8 h-auto">
+                        <h6 class="font-bold mt-2 text-2xl mb-2 md:mb-6">Pertemuan Pertama</h6>
+                        <div class="w-40 h-1 bg-gray-800"></div>
+                    </div>
+                </div>
+                <div class="col-span-12 order-3 mt-6 text-gray-600">
+                    Kami pertama kali bertemu adalah di kampus kami. Saat itu saya melihat dia sedang berjalan menuju
+                    kantin, indah sekali. Pada saat itu juga saya sudah jatuh cinta pada pandangan pertama kepadanya.
+                </div>
+            </div>
+            <div class="content my-16">
+                <div class="flex items-center justify-between mb-12  animate-fade-up duration-1400" data-aos="fade-up"
+                    data-aos-duration="1400">
+
+                    <div class="order-1 md:order-2 ">
+                        <div class="rounded-full overflow-hidden mb-6 img-wrapper img-wrapper-left">
+                            <div class="img-wrapper-spouse w-24 h-24 ">
+                                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/misc/hands-1.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/love.svg" alt=""
+                            class="w-8 h-auto">
+                        <h6 class="font-bold mt-2 text-2xl mb-2 md:mb-6">First Date</h6>
+                        <div class="w-40 h-1 bg-gray-800"></div>
+                    </div>
+                </div>
+                <div class="col-span-12 order-3 mt-6 text-gray-600">
+                    Kencan pertama kami dimulai ketika saya memberanikan diri untuk menyatakan perasaan saya kepadanya,
+                    dan saya tak menyangka ternayata dia juga mencintai saya. Kami pun berjalan-jalan mengitari kota
+                    pada saat itu.
+                </div>
+            </div>
+            <div class="content mb-16">
+                <div class="flex items-center justify-between mb-12  animate-fade-up duration-1400" data-aos="fade-up"
+                    data-aos-duration="1400">
+
+                    <div class="order-2 md:order-2 ">
+                        <div class="rounded-full overflow-hidden mb-6 img-wrapper img-wrapper-left">
+                            <div class="img-wrapper-spouse w-24 h-24 ">
+                                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/misc/hands-1.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-2 md:order-1">
+                        <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/love.svg" alt=""
+                            class="w-8 h-auto">
+                        <h6 class="font-bold mt-2 text-2xl mb-2 md:mb-6">In A Relationship</h6>
+                        <div class="w-40 h-1 bg-gray-800"></div>
+                    </div>
+                </div>
+                <div class="col-span-12 order-3 mt-6 text-gray-600">
+                    Setiap hubungan pasti memiliki roller coasternya sendiri, begitu juga dengan kami. Susah, senang,
+                    sedih, berantem, baikan, kami jalani bersama-sama. Alhamdulillah dengan baiknya komunikasi hubungan
+                    kami dapat berjalan dengan lancar.
+                </div>
+            </div>
+            <div class="content my-16">
+                <div class="flex items-center justify-between mb-12  animate-fade-up duration-1400" data-aos="fade-up"
+                    data-aos-duration="1400">
+
+                    <div class="order-1 md:order-2 ">
+                        <div class="rounded-full overflow-hidden mb-6 img-wrapper img-wrapper-left">
+                            <div class="img-wrapper-spouse w-24 h-24 ">
+                                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/misc/hands-1.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/love.svg" alt=""
+                            class="w-8 h-auto">
+                        <h6 class="font-bold mt-2 text-2xl mb-2 md:mb-6">To The Wedding</h6>
+                        <div class="w-40 h-1 bg-gray-800"></div>
+                    </div>
+                </div>
+                <div class="col-span-12 order-3 mt-6 text-gray-600">
+                    Pada momen ini saya yakin dialah tulang rusuk saya, separuh hidup saya. Momen spesial kami akan
+                    dimulai pada titik ini, momen kebahagiaan kami bersama membangun keluarga kecil kami. Kami siap
+                    memulai petualangan baru.
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Galeri -->
+    <section class=" py-8" id="section-9">
+        <div class=" max-w-6xl mx-auto relative  " data-aos="fade-up" data-aos-duration="1200">
+            <div class="py-16">
+                <div class="flex justify-center py-2">
+                    <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                        alt="" srcset="">
+                </div>
+                <p class="text-xl text-center">Sejak kami bertemu dan memutuskan menikah</p>
+                <h2 class="font-normal text-4xl text-center">Galeri</h2>
+            </div>
+
+
+
+
+            <div class="row">
+
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2 " id="gallery">
+                    <img src="https://wedding.invie.my.id/assets/img/prewed/prewed7.jpeg" alt="" srcset=""
+                        class="gallery-h object-center object-cover">
+                    <img src="https://wedding.invie.my.id/assets/img/prewed/prewed9.jpeg" alt="" srcset=""
+                        class="gallery-h object-center object-cover">
+                    <img src="https://wedding.invie.my.id/assets/img/prewed/prewed4.jpeg" alt="" srcset=""
+                        class="gallery-h object-center object-cover">
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2" id="gallery">
+                    <img src="https://wedding.invie.my.id/assets/img/prewed/prewed19.jpeg" alt="" srcset=""
+                        class="gallery-h object-center object-cover ">
+                    <img src="https://wedding.invie.my.id/assets/img/prewed/prewed20.jpeg" alt="" srcset=""
+                        class="gallery-h  object-center object-cover">
+                    <img src="https://wedding.invie.my.id/assets/img/prewed/prewed6.jpeg" alt="" srcset=""
+                        class="gallery-h object-center object-cover">
+                </div>
+
+                <div class="pt-4">
+                    <iframe class="h-screen w-full" src="https://www.youtube.com/embed/6vGoiL75K8k" data-aos="fade-up"
+                        data-aos-duration="1000" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen=""></iframe>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Love Gift -->
+    <section id="section-10" class="">
+        <div class="py-24">
+            <div class="">
+                <div class="flex justify-center">
+                    <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                        alt="" srcset="">
+                </div>
+                <h2 class=" font-bold text-center mb-10 text-4xl " data-aos="fade-up" data-aos-duration="1400">Love Gift
+                </h2>
+
+                <div class="px-8 py-12 bg-white mx-auto relative border-2" style="max-width:400px;">
+                    <div class="card-body p-0">
+                        <div class="gift-events mt-2 mx-2">
+                            <div style="display: flex;align-items: center;justify-content: space-between;">
+                                <label for="optionRek">Pilih tujuan transfer :</label>
+                                <img id="img-gift" style="width:auto; max-height:24px"
+                                    src="https://wedding.invie.my.id//assets/img/icons/gift/bca.png" alt="">
+                            </div>
+
+
+                            <div class="">
+                                <select
+                                    class="mt-4 border border-gray-300 rounded-md px-4 py-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                    id="optionRek" onchange="changeRek()">
+                                    <option value="bca">Bank BCA</option>
+                                    <option value="bni">Bank BNI</option>
+                                    <option value="bri">Bank BRI</option>
+                                    <option value="bsi">Bank BSI</option>
+                                    <option value="cimb">Bank CIMB</option>
+                                    <option value="jago">Bank Jago</option>
+                                    <option value="mandiri">Bank Mandiri</option>
+                                    <option value="jenius">Jenius</option>
+                                    <option value="dana">DANA</option>
+                                    <option value="gopay">GOPAY</option>
+                                    <option value="ovo">OVO</option>
+                                    <option value="shopeepay">ShopeePay</option>
+                                </select>
+                            </div>
+
+                            <p id="desc-rek" class="mt-4">No. Rekening :
+                                <span id="data-copy"><b>32523422</b></span> <i
+                                    class="fas fa-copy copy-account border-2 border-black p-1"
+                                    onclick="copyEvent('data-copy')"></i> <br> a/n Farrel Alamsyah
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+    </section>
+    <!--RSVP -->
+    <section id="section-11" class="">
+        <div class="container-xxl">
+            <div class=" py-16">
+                <div class="flex justify-center">
+                    <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                        alt="" srcset="">
+                </div>
+                <p class="text-center py-2 text-xl">Will You Attend</p>
+                <h2 class="text-center text-3xl font-bold py-2">RVSP</h2>
+                <div class="flex justify-center  ">
+                    <div class="col-span-8 col-md-8 col-lg-8 text-dark  p-12 ">
+                        <div class="relative">
+                            <!-- form ucapan -->
+                            <form id="rsvp-form" onsubmit="return false">
+                                <div class="mb-7">
+                                    <label for="" class="mb-2">Nama</label> <br>
+                                    <input id="name" type="text" placeholder="Nama Lengkap"
+                                        class=" w-full mb-10 py-4 px-2 bg-transparent border border-gray-300  "
+                                        style="width: 600px;">
+                                </div>
+                                <div>
+                                    <label for="">Bersedia hadir di acara kami?</label>
+                                    <select id="name"
+                                        class="w-full mb-10 py-4 px-2 bg-transparent border border-gray-300">
+                                        <option value="" selected="">Pilah salah satu</option>
+                                        <option value="option1">Ya</option>
+                                        <option value="option2">Tidak</option>
+
+                                    </select>
+                                </div>
+
+
+
+                                <div class="mb-7">
+                                    <label for="" class="mb-2">Jumlah Tamu</label> <br>
+                                    <input id="name" type="text" placeholder="Jumlah Tamu (isi 0 jika tidak hadir)"
+                                        class=" w-full mb-10 py-4 px-2 bg-transparent border border-gray-300 "
+                                        style="width: 600px;">
+                                </div>
+                                <div class="mb-7">
+                                    <label for="" class="mb-2">Kirim ucapan</label> <br>
+                                    <textarea id="name" rows="4"
+                                        class="w-full mb-10 py-4 px-2 bg-transparent border border-gray-300"></textarea>
+                                </div>
+
+                                <div class="flex justify-center">
+                                    <button id="tombol_rsvp" class=" btn py-4 px-10 text-white">Jawab
+                                        Undangan</button>
+                                </div>
+
+                            </form>
+                            <!-- end of form ucapan -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Friends -->
+    <section id="section-12">
+        <div class="py-24 text-dark">
+            <div class="flex justify-center">
+                <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                    alt="" srcset="">
+            </div>
+            <h4 class="text-xl mb-3 mb-lg-12 text-center " data-aos="fade-up" data-aos-duration="1300">
+                Best
+                Wishes</h4>
+            <div class="text-3xl font-bold mb-3 mb-lg-12 text-center" data-aos="fade-up" data-aos-duration="1300">
+                Ucapan
+            </div>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <div class="item">
+                            <div class=" text-center">
+                                <figure class="flex justify-center">
+                                    <img class="w-32 h-32" src="https://wedding.invie.my.id/assets/img/avatar/male.png"
+                                        alt="user">
+                                </figure>
+                                <h6 class="font-bold text-xs uppercase tracking-wide">Andy Yusuf</h6>
+                                <span class="font-bold text-xs uppercase tracking-wide">Sahabat Mempelai Pria</span>
+                                <blockquote>
+                                    <p class="italic text-gray-500 text-lg leading-relaxed">"Selamat ya Farrel & Fitri.
+                                        Semoga menjadi keluarga <br> yang sakinnah mawaddah
+                                        warrahmah. Selamat <br> menempuh hidup baru!"</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="item">
+                            <div class=" text-center">
+                                <figure class="flex justify-center">
+                                    <img class="w-32 h-32"
+                                        src="https://wedding.invie.my.id/assets/img/avatar/female.png" alt="user">
+                                </figure>
+                                <h6 class="font-bold text-xs uppercase tracking-wide">Hilya Putri</h6>
+                                <span class="font-bold text-xs uppercase tracking-wide">Sahabat Mempelai Wanita</span>
+                                <blockquote>
+                                    <p class="italic text-gray-500 text-lg leading-relaxed">"Semoga menjadi keluarga
+                                        yang sakinnah mawaddah <br> warrahmah. Congrats both of you!""</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="item">
+                            <div class=" text-center">
+                                <figure class="flex justify-center">
+                                    <img class="w-32 h-32"
+                                        src="https://wedding.invie.my.id/assets/img/avatar/female.png" alt="user">
+                                </figure>
+                                <h6 class="font-bold text-xs uppercase tracking-wide">Farcha Alkatiri</h6>
+                                <span class="font-bold text-xs uppercase tracking-wide">Teman Kelas Mempelai
+                                    Wanita</span>
+                                <blockquote>
+                                    <p class="italic text-gray-500 text-lg leading-relaxed">"Aku seneng banget, akhirnya
+                                        kalian bisa sampai di titik <br> ini. Semoga kedepannya tetap dilancarkan ya,
+                                        aamiin. Selamat!"</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="prev-btn"></button>
+                    <div class="dots">
+                        <button class="dot active-dot"></button>
+                        <button class="dot"></button>
+                        <button class="dot"></button>
+                    </div>
+                    <button class="next-btn"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  WIshes -->
+    <section id="section-13" class="rsvp-bg py-16 bg-cover bg-no-repeat">
+        <div class="container-xxl">
+
+            <div class=" py-8 ">
+                <div class="flex justify-center">
+                    <img src="https://wedding.invie.my.id/assets/vendors/theme-four/img/decoration/foliage-horizontal-1.svg"
+                        alt="" srcset="">
+                </div>
+                <p class="text-xl mb-3 mb-lg-12 text-center ">Friend Wishes</p>
+                <h2 class="text-3xl font-bold mb-3 mb-lg-12 text-center text-dark">Kirim Ucapan</h2>
+
+                <div class="flex justify-center  ">
+                    <div class="col-span-8 col-md-8 col-lg-8 text-dark  p-12 ">
+
+                        <!-- form ucapan -->
+                        <form id="rsvp-form" onsubmit="return false">
+                            <div class="mb-7">
+                                <label for="" class="mb-2 text-dark">Nama Anda</label> <br>
+                                <input id="name" type="text" placeholder="Nama Lengkap "
+                                    class=" w-full mb-10 rounded py-4 px-2 bg-transparent border border-gray-300 "
+                                    style="width: 600px;">
+                            </div>
+
+
+
+
+
+                            <div class="mb-7">
+                                <label for="" class="mb-2 text-dark">Kirim ucapan</label> <br>
+                                <textarea id="name" cols="30" rows="5" placeholder="Berikan ucapan"
+                                    class="w-full mb-10 py-4 px-2 bg-transparent border border-gray-300 mt-4"
+                                    style="width: 600px;"></textarea>
+                            </div>
+
+                            <div class="flex justify-center">
+                                <button id="tombol_rsvp" class=" btn py-4 px-10 text-white rounded">Kirim
+                                    Ucapan</button>
+                            </div>
+
+                        </form>
+                        <!-- end of form ucapan -->
+                    </div>
+
+                </div>
+            </div>
+            <div class="max-w-2xl mx-auto col-span-8 my-4">
+                <!-- preview ucapan -->
+                <div class="pr-4 mb-6">
+                    <ul id="section-7-list-message" class="list-message ">
+                        <li class="list-item">
+                            <div class="mb-1 text-dark">Muhamad Azmi Rizkifar</div>
+                            <div class="text-xs mb-4 text-dark"><i class="far fa-clock"></i> 2 hari yang lalu</div>
+                            <div class="text-sm text-gray-800">
+                                Alhamdulillah, semoga dilancarkan sampai hari bahagia ya kalian semuaa.. jaga
+                                kesehatan sampai hari H nanti 🥰🥰
+                            </div>
+                        </li>
+                        <hr class="my-2">
+                        <li class="list-item">
+                            <div class="mb-1 text-dark">Fahmi Imam Syuhada</div>
+                            <div class="text-xs mb-4 text-dark"><i class="far fa-clock"></i> 2 hari yang lalu</div>
+                            <div class="text-sm text-gray-800">
+                                Barakallah, selamat Farrel dan Fitri. Semoga menjadi keluarga sakinah, mawaddah wa
+                                rahmah. Finally ya Fitri, sekali lagi selamat Farrel dan Fitri..
+                            </div>
+                        </li>
+                        <hr class="my-2">
+                        <li class="list-item">
+                            <div class="mb-1 text-dark">Zhafira Zahra</div>
+                            <div class="text-xs mb-4 text-dark"><i class="far fa-clock"></i> 2 hari yang lalu</div>
+                            <div class="text-sm text-gray-800">
+                                Kakak selamat ya, Zhafira senang kakak akhirnya akan menikah.. semoga dilancarkan
+                                kedepannya kak, love youu ❤️
+                            </div>
+                        </li>
+                        <hr class="my-2">
+                        <li class="list-item">
+                            <div class="mb-1 text-dark">Haikal Gibran Akbar</div>
+                            <div class="text-xs mb-4 text-dark"><i class="far fa-clock"></i> 3 hari yang lalu</div>
+                            <div class="text-sm text-gray-800">
+                                Selamat ya Farrel. Semoga lancar acaranya dan nantinya menjadi keluarga yang
+                                sakinah, mawaddah, warahmah. Aamiin 🤲😍
+                            </div>
+                        </li>
+                        <hr class="my-2">
+                        <li class="list-item">
+                            <div class="mb-1 text-dark">Haura Dyna</div>
+                            <div class="text-xs mb-4 text-dark"><i class="far fa-clock"></i> 3 hari yang lalu</div>
+                            <div class="text-sm text-gray-800">
+                                Waaaahhh Alhamdulillah. Selamat kalian 🥰 semoga acara berjalan lancar dan diberi
+                                kemudahan untuk segala urusan. Dan menjadi keluarga sakinah, mawaddah, warohmah.
+                                Amiiinnnnn🙏🥰❤
+                            </div>
+                        </li>
+                        <hr class="my-2">
+                        <li class="list-item">
+                            <div class="mb-1 text-dark">Alif Irfandi</div>
+                            <div class="text-xs mb-4 text-dark"><i class="far fa-clock"></i> 4 hari yang lalu</div>
+                            <div class="text-sm text-gray-800">
+                                Selamat menempuh hidup baru, semoga lancar sampai hari H, langgeng sampai maut
+                                memisahkan 👏👏
+                            </div>
+                        </li>
+                        <hr class="my-2">
+                    </ul>
+                </div>
+                <!-- end of preview ucapan -->
+            </div>
+
+        </div>
+    </section>
+    <!-- last -->
+    <section id="section-13" class=" flex justify-center" id="section-9">
+
+        <div class=" text-dark text-center py-16">
+
+
+            <h5 class="font-bold py-4 text-2xl">Terimakasih atas doa restunya</h5>
+            <h3 class="text-4xl font-bold">Farrel &amp; Fitri</h3>
+            <img src="https://wedding.invie.my.id/assets/vendors/theme-six/img/decoration/closing.png" alt="" class="">
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="btn font-light text-xl py-8  bg-red-900 text-white" id="footer">
+        <div class=" mx-8">
+            <div class="flex justify-between items-center">
+                <div class="col-sm mb-3 mb-md-0">Copyright Levidio Wedding - All Rights Reserved</div>
+                <div class="col-sm-auto">info@rootpixel.net</div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentSlide = 0;
+
+            function goToSlide(index) {
+                slides.forEach((slide) => {
+                    slide.style.transform = `translateX(-${index * 100}%)`;
+                });
+            }
+
+            function updateActiveDot(index) {
+                dots.forEach((dot) => {
+                    dot.classList.remove('active-dot');
+                });
+                dots[index].classList.add('active-dot');
+            }
+
+            function goToNextSlide() {
+                if (currentSlide === slides.length - 1) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide++;
+                }
+                goToSlide(currentSlide);
+                updateActiveDot(currentSlide);
+            }
+
+            function goToPrevSlide() {
+                if (currentSlide === 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide--;
+                }
+                goToSlide(currentSlide);
+                updateActiveDot(currentSlide);
+            }
+
+            nextBtn.addEventListener('click', goToNextSlide);
+            prevBtn.addEventListener('click', goToPrevSlide);
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    goToSlide(currentSlide);
+                    updateActiveDot(currentSlide);
+                });
+            });
+            const slidesContainer = document.querySelector('.slidess');
+            const slidess = Array.from(slidesContainer.children);
+            const nextArrow = document.querySelector('.next-arrow');
+
+            let currentPosition = 0; // Start with the first slide
+            const slideWidth = slidess[0].offsetWidth;
+            const slideCount = slidess.length;
+
+            function moveToNextSlide() {
+                currentPosition++;
+                if (currentPosition >= slideCount) {
+                    currentPosition = 0;
+                }
+                slidesContainer.style.transform = `translateX(-${currentPosition * slideWidth}px)`;
+
+                // Remove active class from all slidess
+                slidess.forEach(slide => slide.classList.remove('active'));
+
+                // Add active class to the current slide
+                slidess[currentPosition].classList.add('active');
+            }
+
+            nextArrow.addEventListener('click', moveToNextSlide);
+
+            // Show first slide and add active class to it
+            slidess[0].classList.add('active');
+        });
+
+
+    </script>
+</body>
+
+</html>

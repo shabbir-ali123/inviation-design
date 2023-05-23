@@ -32,6 +32,40 @@
         width: 400px;
 
     }
+    .slider {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .slider-container {
+    position: relative;
+  }
+
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .active-dot {
+    background-color: #333;
+  }
+
 </style>
 
 <body>
@@ -608,24 +642,70 @@
             <div class="mb-16 text-center" data-aos="fade-up" data-aos-duration="1300">
                 Best Wishes
             </div>
-            <div class="flex justify-center">
-                <div class="item">
-                    <div class=" text-center">
-                        <figure class="flex justify-center">
-                            <img class="w-32 h-32" src="https://wedding.invie.my.id/assets/img/avatar/male.png"
-                                alt="user">
-                        </figure>
-                        <h6>Andy Yusuf</h6>
-                        <span>Sahabat Mempelai Pria</span>
-                        <blockquote>
-                            <p>"Selamat ya Farrel &amp; Fitri. Semoga menjadi keluarga yang sakinnah <br> mawaddah
-                                warrahmah.
-                                Selamat menempuh hidup baru!"</p>
-                        </blockquote>
+            <div class="slider-container">
+                <div class="slider">
+                  <div class="slide">
+                    <div class="item">
+                        <div class=" text-center">
+                            <figure class="flex justify-center">
+                                <img class="w-32 h-32" src="https://wedding.invie.my.id/assets/img/avatar/male.png"
+                                    alt="user">
+                            </figure>
+                            <h6>Andy Yusuf</h6>
+                            <span>Sahabat Mempelai Pria</span>
+                            <blockquote>
+                                <p>"Selamat ya Farrel &amp; Fitri. Semoga menjadi keluarga yang sakinnah <br> mawaddah
+                                    warrahmah.
+                                    Selamat menempuh hidup baru!"</p>
+                            </blockquote>
+                        </div>
                     </div>
+                  </div>
+                  <div class="slide">
+                    <div class="item">
+                        <div class=" text-center">
+                            <figure class="flex justify-center">
+                                <img class="w-32 h-32" src="https://wedding.invie.my.id/assets/img/avatar/male.png"
+                                    alt="user">
+                            </figure>
+                            <h6>Andy Yusuf</h6>
+                            <span>Sahabat Mempelai Pria</span>
+                            <blockquote>
+                                <p>"Selamat ya Farrel &amp; Fitri. Semoga menjadi keluarga yang sakinnah <br> mawaddah
+                                    warrahmah.
+                                    Selamat menempuh hidup baru!"</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="slide">
+                    <div class="item">
+                            <div class=" text-center">
+                                <figure class="flex justify-center">
+                                    <img class="w-32 h-32" src="https://wedding.invie.my.id/assets/img/avatar/male.png"
+                                        alt="user">
+                                </figure>
+                                <h6>Andy Yusuf</h6>
+                                <span>Sahabat Mempelai Pria</span>
+                                <blockquote>
+                                    <p>"Selamat ya Farrel &amp; Fitri. Semoga menjadi keluarga yang sakinnah <br> mawaddah
+                                        warrahmah.
+                                        Selamat menempuh hidup baru!"</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                  </div>
                 </div>
-
-            </div>
+                <div class="slider-controls">
+                  <button class="prev-btn">Previous</button>
+                  <div class="dots">
+                    <button class="dot active-dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                  </div>
+                  <button class="next-btn">Next</button>
+                </div>
+              </div>
         </div>
 
     </section>
@@ -746,6 +826,7 @@
             <img src="https://wedding.invie.my.id/assets/vendors/theme-six/img/decoration/closing.png" alt="" class="">
         </div>
     </section>
+  
     <footer class="font-light text-xl py-8 flex items-center bg-red-900 text-white" id="footer" >
         <div class="container mx-8">
             <div class="flex justify-between items-center">
@@ -754,6 +835,58 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+      
+        function goToSlide(index) {
+          slides.forEach((slide) => {
+            slide.style.transform = `translateX(-${index * 100}%)`;
+          });
+        }
+      
+        function updateActiveDot(index) {
+          dots.forEach((dot) => {
+            dot.classList.remove('active-dot');
+          });
+          dots[index].classList.add('active-dot');
+        }
+      
+        function goToNextSlide() {
+          if (currentSlide === slides.length - 1) {
+            currentSlide = 0;
+          } else {
+            currentSlide++;
+          }
+          goToSlide(currentSlide);
+          updateActiveDot(currentSlide);
+        }
+      
+        function goToPrevSlide() {
+          if (currentSlide === 0) {
+            currentSlide = slides.length - 1;
+          } else {
+            currentSlide--;
+          }
+          goToSlide(currentSlide);
+          updateActiveDot(currentSlide);
+        }
+      
+        nextBtn.addEventListener('click', goToNextSlide);
+        prevBtn.addEventListener('click', goToPrevSlide);
+      
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            currentSlide = index;
+            goToSlide(currentSlide);
+            updateActiveDot(currentSlide);
+          });
+        });
+      </script>
 </body>
 
 </html>
